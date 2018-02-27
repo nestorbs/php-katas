@@ -11,6 +11,13 @@ class PasswordValidatorTest extends TestCase
     {
         $passwordValidator = new PasswordValidator();
 
-        $this->assertTrue($passwordValidator->password('Aa00000'));
+        $this->assertTrue($passwordValidator->password('Aa000000'));
+    }
+
+    public function testShouldBeAtLeastEightCharactersLong()
+    {
+        $passwordValidator = new PasswordValidator();
+
+        $this->assertFalse($passwordValidator->password('aaa0000'));
     }
 }
