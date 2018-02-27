@@ -9,7 +9,8 @@ class PasswordValidator
     public function password($password)
     {
         if ($this->isLongEnough($password) &&
-            $this->containsAtLeastOneUppercaseLetter($password)) {
+            $this->containsAtLeastOneUppercaseLetter($password) &&
+            $this->containsAtLeastOneLowercaseLetter($password)) {
             return true;
         }
         return false;
@@ -23,5 +24,10 @@ class PasswordValidator
     private function containsAtLeastOneUppercaseLetter($password)
     {
         return preg_match('/[A-Z]/', $password) === 1;
+    }
+
+    private function containsAtLeastOneLowercaseLetter($password)
+    {
+        return preg_match('/[a-z]/', $password) === 1;
     }
 }
