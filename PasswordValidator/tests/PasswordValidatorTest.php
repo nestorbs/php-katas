@@ -7,17 +7,20 @@ use nestorbs\PasswordValidator;
 
 class PasswordValidatorTest extends TestCase
 {
+    protected $passwordValidator;
+
+    protected function setUp()
+    {
+        $this->passwordValidator = new PasswordValidator();
+    }
+
     public function testIsLongEnough()
     {
-        $passwordValidator = new PasswordValidator();
-
-        $this->assertTrue($passwordValidator->password('Aa000000'));
+        $this->assertTrue($this->passwordValidator->password('Aa000000'));
     }
 
     public function testShouldBeAtLeastEightCharactersLong()
     {
-        $passwordValidator = new PasswordValidator();
-
-        $this->assertFalse($passwordValidator->password('aaa0000'));
+        $this->assertFalse($this->passwordValidator->password('aaa0000'));
     }
 }
