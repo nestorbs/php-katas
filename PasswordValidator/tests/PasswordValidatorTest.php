@@ -24,8 +24,8 @@ class PasswordValidatorTest extends TestCase
         $this->assertFalse($this->passwordValidator->password('aaa0000'));
     }
 
-    public function testShouldBeAtLeastOneUpperCaseLetter()
+    public function testShouldBeAtLeastOneLowercaseLetter()
     {
-        $this->assertFalse($this->passwordValidator->password('aa000000'));
+        $this->assertFalse($this->passwordValidator->password('AA000000'));
     }
 }
