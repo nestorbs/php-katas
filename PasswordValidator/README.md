@@ -29,4 +29,4 @@ You will only be passed strings.
 The string can contain any standard keyboard character.
 Accepted strings can be any length, as long as they are 8 characters or more.
 
-https://www.codewars.com/kata/password-validator
+`https://www.codewars.com/kata/password-validator`
