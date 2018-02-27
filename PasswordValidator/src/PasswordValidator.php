@@ -4,8 +4,6 @@ namespace nestorbs;
 
 class PasswordValidator
 {
-    const MIN_LENGTH = 8;
-
     public function password($password)
     {
         if ($this->isLongEnough($password) &&
@@ -18,7 +16,8 @@ class PasswordValidator
 
     private function isLongEnough($password)
     {
-        return strlen($password) >= $this::MIN_LENGTH;
+        $minLength = 8;
+        return strlen($password) >= $minLength;
     }
 
     private function containsAtLeastOneUppercaseLetter($password)
