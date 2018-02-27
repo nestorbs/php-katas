@@ -28,4 +28,9 @@ class PasswordValidatorTest extends TestCase
     {
         $this->assertFalse($this->passwordValidator->password('AA000000'));
     }
+
+    public function testShouldBeAtLeastOneNumber()
+    {
+        $this->assertFalse($this->passwordValidator->password('AAaaaaaa'));
+    }
 }
