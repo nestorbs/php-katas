@@ -12,6 +12,14 @@ class WrapperTest extends TestCase
     {
         $wrapper = new Wrapper();
 
-        $this->assertEquals('Car', $wrapper->wrap('Car', 6));
+        $this->assertEquals('Car\n', $wrapper->wrap('Car', 6));
+    }
+
+    /** @test */
+    public function should_return_splitted_word_when_word_length_is_longer_than_column()
+    {
+        $wrapper = new Wrapper();
+
+        $this->assertEquals('Ca\nr', $wrapper->wrap('Car', 2));
     }
 }
