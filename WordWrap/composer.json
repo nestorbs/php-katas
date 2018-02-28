@@ -1,0 +1,13 @@
+{
+    "name": "nestorbs/wordWrap",
+    "description": "Word Wrap kata",
+    "autoload": {
+        "psr-4": {
+            "nestorbs\\": "src/",
+            "nestorbs\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    }
+}
