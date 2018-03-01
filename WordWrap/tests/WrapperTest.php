@@ -36,5 +36,6 @@ class WrapperTest extends TestCase
     public function should_remove_space_at_the_beginning_of_the_line()
     {
         $this->assertEquals('to\n', $this->wrapper->wrap(' to', 2));
+        $this->assertEquals('to\nbe\nor\n', $this->wrapper->wrap('to be or', 2));
     }
 }
