@@ -30,4 +30,12 @@ class WrapperTest extends TestCase
 
         $this->assertEquals('to\nbe\nor\n', $wrapper->wrap('tobeor', 2));
     }
+
+    /** @test */
+    public function should_remove_space_at_the_beginning_of_the_line()
+    {
+        $wrapper = new Wrapper();
+
+        $this->assertEquals('to\n', $wrapper->wrap(' to', 2));
+    }
 }
