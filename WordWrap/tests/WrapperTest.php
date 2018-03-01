@@ -22,4 +22,12 @@ class WrapperTest extends TestCase
 
         $this->assertEquals('Ca\nr\n', $wrapper->wrap('Car', 2));
     }
+
+    /** @test */
+    public function should_return_one_break_line_per_column_needed()
+    {
+        $wrapper = new Wrapper();
+
+        $this->assertEquals('to\nbe\nor\n', $wrapper->wrap('tobeor', 2));
+    }
 }
