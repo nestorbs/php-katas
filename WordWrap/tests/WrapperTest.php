@@ -8,7 +8,7 @@ use nestorbs\Wrapper;
 class WrapperTest extends TestCase
 {
     /** @test */
-    public function should_return_full_word_when_word_length_is_smaller_than_column()
+    public function should_return_full_word_when_word_length_is_shorter_than_column()
     {
         $wrapper = new Wrapper();
 
@@ -20,6 +20,6 @@ class WrapperTest extends TestCase
     {
         $wrapper = new Wrapper();
 
-        $this->assertEquals('Ca\nr', $wrapper->wrap('Car', 2));
+        $this->assertEquals('Ca\nr\n', $wrapper->wrap('Car', 2));
     }
 }
