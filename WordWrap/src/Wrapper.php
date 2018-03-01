@@ -9,12 +9,12 @@ class Wrapper
         if (strlen($word) <= $columns) {
             return $word . '\n';
         }
-        $line = substr($word, 0, $columns) . '\n';
-        $start = $columns;
+        $lines = '';
+        $start = 0;
         while (strlen(substr($word, $start)) > 0) {
-            $line = $line . substr($word, $start, $columns) . '\n';
+            $lines = $lines . substr($word, $start, $columns) . '\n';
             $start = $start + $columns;
         }
-        return $line;
+        return $lines;
     }
 }
