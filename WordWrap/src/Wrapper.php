@@ -6,6 +6,9 @@ class Wrapper
 {
     public function wrap($word, $columns)
     {
-        return substr($word, 0, $columns) . '\n' . substr($word, $columns);
+        if (strlen($word) <= $columns) {
+            return $word . '\n';
+        }
+        return (substr($word, 0, $columns)) . '\n' . substr($word, $columns) . '\n';
     }
 }
