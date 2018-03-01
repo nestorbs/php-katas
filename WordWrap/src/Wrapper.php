@@ -6,9 +6,6 @@ class Wrapper
 {
     public function wrap($word, $columns)
     {
-        if (strlen($word) <= $columns) {
-            return $word . '\n';
-        }
         $lines = '';
         $start = 0;
         while (strlen(substr($word, $start)) > 0) {
