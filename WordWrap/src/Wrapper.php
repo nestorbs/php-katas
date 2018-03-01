@@ -7,10 +7,10 @@ class Wrapper
     public function wrap($word, $columns)
     {
         $lines = '';
-        $start = 0;
-        while (strlen(substr($this->removeBeginningSpace($word), $start)) > 0) {
-            $lines = $lines . substr($this->removeBeginningSpace($word), $start, $columns) . '\n';
-            $start = $start + $columns;
+        $words = $this->removeBeginningSpace($word);
+        while (strlen($words) > 0) {
+            $lines = $lines . substr($words, 0, $columns) . '\n';
+            $words = $this->removeBeginningSpace(substr($words, $columns));
         }
         return $lines;
     }
