@@ -1,0 +1,13 @@
+{
+    "name": "nestorbs/TestDouble",
+    "description": "Test double examples",
+    "autoload": {
+        "psr-4": {
+            "nestorbs\\": "src/",
+            "nestorbs\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    }
+}
