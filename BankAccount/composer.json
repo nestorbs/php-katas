@@ -1,0 +1,13 @@
+{
+    "name": "nestorbs/bankaccount",
+    "description": "Bank account kata",
+    "autoload": {
+        "psr-4": {
+            "nestorbs\\": "src/",
+            "nestorbs\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    }
+}
